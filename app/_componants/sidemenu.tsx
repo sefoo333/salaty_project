@@ -52,13 +52,12 @@ function Sidemenu() {
     let [active, setActive] = useState(false)
 
     if(typeof window !== "undefined"){
-   if (localStorage.length == 0) {
                 localStorage.setItem("darkmode", JSON.stringify(false))
                 localStorage.setItem("coutry", JSON.stringify({
                     name: ["EG", "cairo", "مصر"],
                     name2: ["مصر"]
                 }))
-            }
+            
     
     }
 
