@@ -15,9 +15,12 @@ function Praytimes(props: any) {
     useEffect(() => {
         const get = async () => {
             if (typeof window !== "undefined") {
-                let response = await fetch(`http://api.aladhan.com/v1/timingsByCity?country=${JSON.parse(localStorage.getItem("country") || '').name[0]}&city=${JSON.parse(localStorage.getItem("country") || '').name[1]}`);
-                let data1: any = await response.json()
-                setGet(data1)
+                if (localStorage.length > 0) {
+
+                    let response = await fetch(`http://api.aladhan.com/v1/timingsByCity?country=${JSON.parse(localStorage.getItem("country") || '').name[0]}&city=${JSON.parse(localStorage.getItem("country") || '').name[1]}`);
+                    let data1: any = await response.json()
+                    setGet(data1)
+                }
             }
 
 
@@ -27,20 +30,6 @@ function Praytimes(props: any) {
             get();
         }
     }, [])
-
-
-    useEffect(() => {
-        if (typeof window !== "undefined"){
-            if (localStorage.length == 0){
-                localStorage.setItem("darkmode" , JSON.stringify(false))
-                localStorage.setItem("country" , JSON.stringify({
-                    name:["EG","cairo","مصر"],
-                    name2:["مصر"]
-                }))
-                localStorage.setItem("darkmode" , JSON.stringify(false))
-            }
-        }
-    },[])
 
     const salat = [{
         name: "الفجر",
@@ -69,7 +58,7 @@ function Praytimes(props: any) {
             {typeof window !== "undefined" ? (
                 <div className="times">
                     <div className="main text-[40px] font-bold w-full flex justify-end px-[30px] py-[20px]">
-                        <h1 className="w-[200px] text-right border-b-[black] border-b-[5px]">{JSON.parse(localStorage.getItem("country") || '').name2[0]}</h1>
+                        <h1 className="w-[200px] text-right border-b-[black] border-b-[5px]">{localStorage.length > 0 ? JSON.parse(localStorage.getItem("country") || '').name2[0] : null}</h1>
                     </div>
                     <div className="elements grid grid-cols-3 w-full gap-[10px] mt-[30px] justify-items-center max-md:grid-cols-2 max-sm:grid-cols-1">
                         {salat.map((e) => (
