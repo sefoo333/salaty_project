@@ -16,7 +16,7 @@ function PrayNext() {
         return () => {
             get();
         }
-    })
+    },[])
 
     let time: any = new Date().getHours();
 
