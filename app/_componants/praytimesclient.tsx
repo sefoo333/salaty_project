@@ -14,14 +14,10 @@ function Praytimes(props: any) {
 
     useEffect(() => {
         const get = async () => {
-            if (typeof window !== "undefined") {
-
                     let response = await fetch(`http://api.aladhan.com/v1/timingsByCity?country=${localStorage.getItem("country") !== null ?  JSON.parse(localStorage.getItem("country") || '').name[0] : "EG"}&city=${localStorage.getItem("country") !== null ?  JSON.parse(localStorage.getItem("country") || '').name[1] : "cairo"}`);
                     let data1: any = await response.json()
                     setGet(data1)
                 
-            }
-
 
         }
         return () => {
