@@ -46,7 +46,11 @@ function page() {
     }, [])
 
     let [dark, setDark] = useState(false);
-    let darkmode: any = localStorage.getItem("darkmode")
+    let darkmode: any = false
+    if (typeof window !== "undefined") {
+        darkmode = localStorage.getItem("darkmode")
+    }
+    
     let [error, setError] = useState("")
 
     let [dd, setdd]: any = useState("")
