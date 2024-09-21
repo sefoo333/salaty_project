@@ -11,7 +11,8 @@ function Praytimes(props: any) {
         if (typeof window !== "undefined"){
             country =   localStorage.getItem("country");
         }
-},[])    useEffect(() => {
+},[])   
+        useEffect(() => {
         const get = async () => {
             let response = await fetch(`http://api.aladhan.com/v1/timingsByCity?country=${JSON.parse(country).name[0]}&city=${JSON.parse(country).name[1]}`);
             let data1: any = await response.json()
