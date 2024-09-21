@@ -39,7 +39,7 @@ const data = [
 ]
 function Sidemenu(props: props) {
 
- let dark: any = ""
+ let dark: any = false
     if (typeof window !== "undefined") {
         dark = localStorage.getItem("darkmode")
     }
