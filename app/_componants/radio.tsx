@@ -17,7 +17,9 @@ function Radio() {
     let audio2: any = useRef()
   let [data, setData]:any = useState([]);
   useEffect(() => {
-    setData(localStorage.getItem("audio"))
+    if (typeof window !== "undefined"){
+        setData(localStorage.getItem("audio"))
+    }
   },[])
     return (
         <div className="radio_window w-[700px] h-[500px] rounded-md bg-black relative">
