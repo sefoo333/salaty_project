@@ -15,12 +15,7 @@ function Radio() {
     let [active2, setActive2] = useState(true)
     let [Time, setTime]: any = useState("")
     let audio2: any = useRef()
-  let [data, setData]:any = useState([]);
-  useEffect(() => {
-    if (typeof window !== "undefined"){
-        setData(localStorage.getItem("audio"))
-    }
-  },[])
+let data = localStorage.getItem("audio")
     return (
         <div className="radio_window w-[700px] h-[500px] rounded-md bg-black relative">
 
@@ -28,7 +23,7 @@ function Radio() {
 
             <div className="radio_information absolute left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] flex flex-col justify-center items-center">
                 <FaRadio className=' text-[#dddddd82] text-[50px]' />
-                <h1 className='text-[#ccc]'>{JSON.parse(data).name2}</h1>
+                <h1 className='text-[#ccc]'>{JSON.parse(data || "").name2}</h1>
             </div>
 
             <div className="bottom absolute bottom-0 bg-red-400 flex justify-between items-center w-full text-white py-[15px] px-[20px] text-[20px]">
@@ -36,7 +31,7 @@ function Radio() {
                     setTime(e.currentTarget.currentTime.toFixed(0))
 
 
-                }} ref={audio2} src={JSON.parse(data).name}>
+                }} ref={audio2} src={JSON.parse(data || "").name}>
 
                 </audio>
                 <div className="play flex" onClick={() => {
