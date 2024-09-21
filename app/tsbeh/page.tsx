@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 
 import jsonfile from "../json_files/adkar.json"
