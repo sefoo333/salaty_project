@@ -38,26 +38,25 @@ const data = [
     }
 ]
 function Sidemenu() {
-    let [dark, setDark]: any = useState([]);
     useEffect(() => {
-        if (typeof  window !== "undefined"){
-                    setDark(localStorage.getItem("darkmode"))
-             if (JSON.parse(localStorage.getItem("darkmode") || "")) {
+      if (typeof window !== "undefined"){
+            if (JSON.parse(localStorage.getItem("darkmode") || "")) {
             document.body.style.backgroundColor = "#3C3D37"
             document.body.style.color = "white"
         } else {
             document.body.style.backgroundColor = "white"
             document.body.style.color = "black"
         }
-        }
-       
+      }
     }, [JSON.parse(localStorage.getItem("darkmode") || "")])
     let [active, setActive] = useState(false)
 
     return (
         <>
-            <FiMenu className="hidden z-[999999999] max-lg:block text-[30px] fixed left-[20px] top-[20px]" onClick={() => active ? setActive(false) : setActive(true)} />
-            <div className={`flex h-screen flex-col justify-between relative z-[99999999] border-e max-lg:h-full max-lg:w-full max-lg:items-center max-lg:justify-center max-lg:text-center max-lg:fixed bg-white ${!active ? `max-lg:hidden` : `max-lg:flex`}`} style={JSON.parse(dark || '') ? { backgroundColor: "#1E201E", color: "white" } : {}} >
+            {typeof window !== "undefined" ? (
+            <>
+                  <FiMenu className="hidden z-[999999999] max-lg:block text-[30px] fixed left-[20px] top-[20px]" onClick={() => active ? setActive(false) : setActive(true)} />
+            <div className={`flex h-screen flex-col justify-between relative z-[99999999] border-e max-lg:h-full max-lg:w-full max-lg:items-center max-lg:justify-center max-lg:text-center max-lg:fixed bg-white ${!active ? `max-lg:hidden` : `max-lg:flex`}`} style={JSON.parse(localStorage.getItem("darkmode") || '') ? { backgroundColor: "#1E201E", color: "white" } : {}} >
                 <div className="px-4 py-6">
                     <span className={`grid text-[35px] font-bold italic  h-10 w-32 place-content-center rounded-lg  text-white ${getCar.className}`}>
                         صـلاتــي
@@ -68,8 +67,8 @@ function Sidemenu() {
                             <li>
                                 <Link
                                     href={e.href}
-                                    className={`block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 ${!JSON.parse(dark || "") ? `hover:bg-gray-100 hover:text-gray-700` : `hover:bg-[#3C3D37] hover:text-white`}`}
-                                    style={JSON.parse(dark || '') ? { color: "white" } : {}}
+                                    className={`block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 ${!JSON.parse(localStorage.getItem("darkmode") || "") ? `hover:bg-gray-100 hover:text-gray-700` : `hover:bg-[#3C3D37] hover:text-white`}`}
+                                    style={JSON.parse(localStorage.getItem("darkmode") || '') ? { color: "white" } : {}}
                                 >
                                     {e.name}
                                 </Link>
@@ -99,6 +98,10 @@ function Sidemenu() {
       </a>
     </div> */}
             </div>
+            </>
+            ) :
+                null
+            }
         </>
     )
 }
