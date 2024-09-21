@@ -37,31 +37,19 @@ const data = [
         href: "/settings"
     }
 ]
-function Sidemenu(props: props) {
-
- let dark: any = false
-    if (typeof window !== "undefined") {
-        dark = localStorage.getItem("darkmode")
-    }
-
-
-    
+function Sidemenu() {
+    let [dark, setDark]: any = useState([]);
     useEffect(() => {
-           if (localStorage.length == 0) {
-            localStorage.setItem("darkmode", JSON.stringify(false))
-        }
-        if (JSON.parse(dark || "")) {
+        setDark(localStorage.getItem("darkmode"))
+        if (JSON.parse(localStorage.getItem("darkmode") || "")) {
             document.body.style.backgroundColor = "#3C3D37"
             document.body.style.color = "white"
         } else {
             document.body.style.backgroundColor = "white"
             document.body.style.color = "black"
         }
-    }, [JSON.parse(dark || "")])
+    }, [JSON.parse(localStorage.getItem("darkmode") || "")])
     let [active, setActive] = useState(false)
-
-
-    
 
     return (
         <>
