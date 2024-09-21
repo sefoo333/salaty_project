@@ -1,6 +1,5 @@
-
 import React from 'react'
-import Praytimes from '../_componants/praytimes'
+import Praytimes from '../_componants/praytimesclient'
 import PrayNext from '../_componants/praynext'
 
 

@@ -4,7 +4,6 @@
 import React from 'react'
 import { FaGithub } from "react-icons/fa";
 import { IoLogoLinkedin } from "react-icons/io5";
-import { useEffect} from 'react'
 
 import { Rakkas } from "next/font/google"
 
@@ -14,12 +13,7 @@ const getCar = Rakkas({
 });
 
 function Footer() {
-     let active:any = false
-    useEffect(() => {
-        if (typeof window !== "undefined"){
-            active =   localStorage.getItem("darkmode");
-        }
-},[])
+    let active = localStorage.getItem("darkmode")
     return (
         <>
             {!JSON.parse(active || "") ? (
