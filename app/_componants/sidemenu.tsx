@@ -51,13 +51,13 @@ function Sidemenu() {
     }, [JSON.parse(localStorage.getItem("darkmode") || "")])
     let [active, setActive] = useState(false)
 
-    useEffect(() => {
-        if (typeof window  !== "undefined"){
-            if (localStorage.length == 0){
-                localStorage.setItem("darkmode" , JSON.stringify(false))
-            }
-        }
-    },[])
+    // useEffect(() => {
+    //     if (typeof window  !== "undefined"){
+    //         if (localStorage.length == 0){
+    //             localStorage.setItem("darkmode" , JSON.stringify(false))
+    //         }
+    //     }
+    // },[])
 
     return (
         <>
