@@ -10,7 +10,7 @@ import Link from 'next/link';
 
 function page({ params }: any) {
     let data: any = params.kindofzkr
-    let getselect: any = jsonfile[`${data}`]
+    let getselect: any = jsonfile[data as keyof typeof jsonfile]
 
     return (
         <div className="parent w-full px-[40px] mt-[50px]">
