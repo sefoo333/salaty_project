@@ -14,7 +14,8 @@ function Praytimes(props: any) {
 
     useEffect(() => {
         const get = async () => {
-                    let response = await fetch(`http://api.aladhan.com/v1/timingsByCity?country=${localStorage.getItem("country") !== null ?  JSON.parse(localStorage.getItem("country") || '').name[0] : "EG"}&city=${localStorage.getItem("country") !== null ?  JSON.parse(localStorage.getItem("country") || '').name[1] : "cairo"}`);
+                    // let response = await fetch(`http://api.aladhan.com/v1/timingsByCity?country=${localStorage.getItem("country") !== null ?  JSON.parse(localStorage.getItem("country") || '').name[0] : "EG"}&city=${localStorage.getItem("country") !== null ?  JSON.parse(localStorage.getItem("country") || '').name[1] : "cairo"}`);
+                                let response = await fetch(`http://api.aladhan.com/v1/timingsByCity?country=EG"&city=cairo`);
                     let data1: any = await response.json()
                     setGet(data1)
                 
@@ -50,6 +51,7 @@ function Praytimes(props: any) {
     ]
     return (
         <>
+            {typeof window !== "undefined" ? (
                 <div className="times">
                     <div className="main text-[40px] font-bold w-full flex justify-end px-[30px] py-[20px]">
                         <h1 className="w-[200px] text-right border-b-[black] border-b-[5px]">{localStorage.getItem("country") !== null ?  JSON.parse(localStorage.getItem("country") || '').name2[0] : null}</h1>
@@ -63,6 +65,7 @@ function Praytimes(props: any) {
                         ))}
                     </div>
                 </div>
+            ):null}
         </>
     )
 }
