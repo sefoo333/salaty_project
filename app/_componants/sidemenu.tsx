@@ -47,6 +47,9 @@ function Sidemenu(props: props) {
 
     
     useEffect(() => {
+           if (localStorage.length == 0) {
+            localStorage.setItem("darkmode", JSON.stringify(false))
+        }
         if (JSON.parse(dark || "")) {
             document.body.style.backgroundColor = "#3C3D37"
             document.body.style.color = "white"
@@ -58,11 +61,7 @@ function Sidemenu(props: props) {
     let [active, setActive] = useState(false)
 
 
-    useEffect(() => {
-        if (localStorage.length == 1) {
-            localStorage.setItem("darkmode", JSON.stringify(false))
-        }
-    }, [])
+    
 
     return (
         <>
