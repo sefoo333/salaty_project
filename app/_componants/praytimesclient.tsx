@@ -32,7 +32,7 @@ function Praytimes(props: any) {
     useEffect(() => {
         if (typeof window !== "undefined"){
             if (localStorage.length == 0){
-                localStorage.setItem("darkmode" , false)
+                localStorage.setItem("darkmode" , JSON.stringify(false))
             }
         }
     },[])
