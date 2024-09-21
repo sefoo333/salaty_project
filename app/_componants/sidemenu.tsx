@@ -54,7 +54,7 @@ function Sidemenu() {
     useEffect(() => {
         if (typeof window  !== "undefined"){
             if (localStorage.length == 0){
-                localStorage.setItem("darkmode" , JSON.stringfy(false))
+                localStorage.setItem("darkmode" , JSON.stringify(false))
             }
         }
     },[])
