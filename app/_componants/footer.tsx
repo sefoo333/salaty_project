@@ -1,7 +1,7 @@
 "use client"
 
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaGithub } from "react-icons/fa";
 import { IoLogoLinkedin } from "react-icons/io5";
 
@@ -13,10 +13,11 @@ const getCar = Rakkas({
 });
 
 function Footer() {
- let active: any = false
-    if (typeof window !== "undefined") {
-        active = localStorage.getItem("darkmode")
-    }    return (
+    let [active, setActive]: any = useState(false);
+    useEffect(() => {
+        setActive(localStorage.getItem("darkmode"))
+    }, [])
+    return (
         <>
             {!JSON.parse(active || "") ? (
                 <footer className="bg-gray-50">
