@@ -4,6 +4,7 @@
 import React from 'react'
 import { FaGithub } from "react-icons/fa";
 import { IoLogoLinkedin } from "react-icons/io5";
+import { useEffect} from 'react'
 
 import { Rakkas } from "next/font/google"
 
