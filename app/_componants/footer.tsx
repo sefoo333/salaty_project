@@ -13,7 +13,12 @@ const getCar = Rakkas({
 });
 
 function Footer() {
-    let active = localStorage.getItem("darkmode")
+     let active:any = false
+    useEffect(() => {
+        if (typeof window !== "undefined"){
+            active =   localStorage.getItem("darkmode");
+        }
+},[])
     return (
         <>
             {!JSON.parse(active || "") ? (
