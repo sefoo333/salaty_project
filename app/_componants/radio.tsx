@@ -15,7 +15,7 @@ function Radio() {
     let [active2, setActive2] = useState(true)
     let [Time, setTime]: any = useState("")
     let audio2: any = useRef()
- let data: any = ""
+ let data: any = []
     if (typeof window !== "undefined") {
         data = localStorage.getItem("audio")
     }    return (
