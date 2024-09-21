@@ -5,8 +5,13 @@ import React, { useEffect, useState } from 'react'
 function Praytimes(props: any) {
 
     let [data1, setGet]: any = useState([])
+ let country: any = ""
+    if (typeof window !== "undefined") {
+        country = localStorage.getItem("country")
+    }
 
-    let country: any = localStorage.getItem("country")
+
+    
     useEffect(() => {
         const get = async () => {
             let response = await fetch(`http://api.aladhan.com/v1/timingsByCity?country=${JSON.parse(country).name[0]}&city=${JSON.parse(country).name[1]}`);
