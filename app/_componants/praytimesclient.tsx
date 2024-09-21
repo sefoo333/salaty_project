@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 
-function Praytimes() {
+function Praytimes(props: any) {
 
     let [data1, setGet]: any = useState([])
 

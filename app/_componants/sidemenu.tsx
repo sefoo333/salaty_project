@@ -37,7 +37,7 @@ const data = [
         href: "/settings"
     }
 ]
-function Sidemenu() {
+function Sidemenu(props: props) {
     let dark = localStorage.getItem("darkmode")
     useEffect(() => {
         if (JSON.parse(dark || "")) {

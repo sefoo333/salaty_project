@@ -1,4 +1,3 @@
-"use client"
 
 import React, { useEffect } from 'react'
 import Button from '../_componants/azkar_comps/buttons'

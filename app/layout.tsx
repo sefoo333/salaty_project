@@ -36,7 +36,7 @@ export default function RootLayout({
       >
         <div className="window flex justify-end mb-[40px]" >
           {children}
-          <Sidemenu />
+          <Sidemenu font={getCar.className} />
         </div>
         <Footer />
       </body>
