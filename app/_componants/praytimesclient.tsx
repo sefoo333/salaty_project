@@ -36,24 +36,24 @@ function Praytimes(props: any) {
 
     const salat = [{
         name: "الفجر",
-        time: data1.data?.timings?.Fajr,
+        time: data1.data?.timings?.Fajr || "12:12",
     }, {
         name: "الشروق",
-        time: data1.data?.timings?.Sunrise,
+        time: data1.data?.timings?.Sunrise || "12:12",
     }, {
         name: "الظهر",
-        time: data1.data?.timings?.Dhuhr,
+        time: data1.data?.timings?.Dhuhr || "12:12",
     }, {
         name: "العصر",
-        time: data1.data?.timings?.Asr,
+        time: data1.data?.timings?.Asr || "12:12",
     },
     {
         name: "المغرب",
-        time: data1.data?.timings?.Maghrib,
+        time: data1.data?.timings?.Maghrib || "12:12",
     },
     {
         name: "العشاء",
-        time: data1.data?.timings?.Isha,
+        time: data1.data?.timings?.Isha || "12:12",
     }
     ]
     return (
