@@ -9,7 +9,7 @@ import Button2 from '@/app/_componants/azkar_comps/button2';
 import Link from 'next/link';
 
 function page({ params }: any) {
-    let data: any = params.kindofzkr
+    let data: string = params.kindofzkr
     let getselect: any = jsonfile[data as keyof typeof jsonfile]
 
     return (
