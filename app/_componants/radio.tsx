@@ -25,7 +25,7 @@ function Radio() {
 
             <div className="radio_information absolute left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] flex flex-col justify-center items-center">
                 <FaRadio className=' text-[#dddddd82] text-[50px]' />
-                <h1 className='text-[#ccc]'>{JSON.parse(data).name2}</h1>
+                <h1 className='text-[#ccc]'>{data !== "" ? JSON.parse(data).name2 : null}</h1>
             </div>
 
             <div className="bottom absolute bottom-0 bg-red-400 flex justify-between items-center w-full text-white py-[15px] px-[20px] text-[20px]">
