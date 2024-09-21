@@ -40,14 +40,17 @@ const data = [
 function Sidemenu() {
     let [dark, setDark]: any = useState([]);
     useEffect(() => {
-        setDark(localStorage.getItem("darkmode"))
-        if (JSON.parse(localStorage.getItem("darkmode") || "")) {
+        if (typeof  window !== "undefiend"){
+                    setDark(localStorage.getItem("darkmode"))
+             if (JSON.parse(localStorage.getItem("darkmode") || "")) {
             document.body.style.backgroundColor = "#3C3D37"
             document.body.style.color = "white"
         } else {
             document.body.style.backgroundColor = "white"
             document.body.style.color = "black"
         }
+        }
+       
     }, [JSON.parse(localStorage.getItem("darkmode") || "")])
     let [active, setActive] = useState(false)
 
