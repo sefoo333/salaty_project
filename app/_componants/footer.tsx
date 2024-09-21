@@ -13,8 +13,10 @@ const getCar = Rakkas({
 });
 
 function Footer() {
-    let active = localStorage.getItem("darkmode")
-    return (
+ let active: any = false
+    if (typeof window !== "undefined") {
+        active = localStorage.getItem("darkmode")
+    }    return (
         <>
             {!JSON.parse(active || "") ? (
                 <footer className="bg-gray-50">
