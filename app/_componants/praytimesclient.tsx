@@ -15,15 +15,11 @@ function Praytimes(props: any) {
     useEffect(() => {
         const get = async () => {
             if (typeof window !== "undefined") {
-                if (localStorage.length > 0) {
 
                     let response = await fetch(`http://api.aladhan.com/v1/timingsByCity?country=${JSON.parse(localStorage.getItem("country") || '').name[0]}&city=${JSON.parse(localStorage.getItem("country") || '').name[1]}`);
                     let data1: any = await response.json()
                     setGet(data1)
-                } 
-                else {
-                    console.log("error")
-                }
+                
             }
 
 
