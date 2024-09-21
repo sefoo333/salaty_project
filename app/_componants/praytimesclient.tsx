@@ -28,6 +28,15 @@ function Praytimes(props: any) {
         }
     }, [])
 
+
+    useEffect(() => {
+        if (typeof window !== "undefined"){
+            if (localStorage.length == 0){
+                localStorage.setItem("darkmode" , false)
+            }
+        }
+    },[])
+
     const salat = [{
         name: "الفجر",
         time: data1.data?.timings?.Fajr,
