@@ -50,6 +50,11 @@ function Sidemenu(props: props) {
     }, [JSON.parse(dark || "")])
     let [active, setActive] = useState(false)
 
+        useEffect(() => {
+        if (localStorage.length == 0) {
+            localStorage.setItem("darkmode", JSON.stringify(false))
+        }
+    }, [])
 
     return (
         <>
