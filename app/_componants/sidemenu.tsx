@@ -38,7 +38,12 @@ const data = [
     }
 ]
 function Sidemenu(props: props) {
-    let dark = localStorage.getItem("darkmode")
+     let dark:any = ""
+    useEffect(() => {
+        if (typeof window !== "undefined"){
+            dark =   localStorage.getItem("darkmode");
+        }
+},[])
     useEffect(() => {
         if (JSON.parse(dark || "")) {
             document.body.style.backgroundColor = "#3C3D37"
