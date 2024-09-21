@@ -38,26 +38,30 @@ const data = [
     }
 ]
 function Sidemenu() {
-    useEffect(() => {
-      if (typeof window !== "undefined"){
-            if (JSON.parse(localStorage.getItem("darkmode") || "")) {
-            document.body.style.backgroundColor = "#3C3D37"
-            document.body.style.color = "white"
-        } else {
-            document.body.style.backgroundColor = "white"
-            document.body.style.color = "black"
-        }
-      }
-    }, [JSON.parse(localStorage.getItem("darkmode") || "")])
+    // useEffect(() => {
+    //   if (typeof window !== "undefined"){
+    //         if (JSON.parse(localStorage.getItem("darkmode") || "")) {
+    //         document.body.style.backgroundColor = "#3C3D37"
+    //         document.body.style.color = "white"
+    //     } else {
+    //         document.body.style.backgroundColor = "white"
+    //         document.body.style.color = "black"
+    //     }
+    //   }
+    // }, [JSON.parse(localStorage.getItem("darkmode") || "")])
     let [active, setActive] = useState(false)
 
-    // useEffect(() => {
-    //     if (typeof window  !== "undefined"){
-    //         if (localStorage.length == 0){
-    //             localStorage.setItem("darkmode" , JSON.stringify(false))
-    //         }
-    //     }
-    // },[])
+   useEffect(() => {
+        if (typeof window !== "undefined") {
+            if (localStorage.length == 0) {
+                localStorage.setItem("darkmode", JSON.stringify(false))
+                localStorage.setItem("coutry", JSON.stringify({
+                    name: ["EG", "cairo", "مصر"],
+                    name2: ["مصر"]
+                }))
+            }
+        }
+    }, [])
 
     return (
         <>
