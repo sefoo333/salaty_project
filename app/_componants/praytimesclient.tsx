@@ -6,22 +6,26 @@ function Praytimes(props: any) {
 
     let [data1, setGet]: any = useState([])
 
+    let [country, setData2]: any = useState([]);
 
 
-    let country: any = ""
+
+
+
     useEffect(() => {
+        setData2(JSON.parse(localStorage.getItem("country") || ''))
         const get = async () => {
-            if (typeof window !== "undefined") {
-                country = localStorage.getItem("country")
-            }
-            let response = await fetch(`http://api.aladhan.com/v1/timingsByCity?country=${JSON.parse(country).name[0]}&city=${JSON.parse(country).name[1]}`);
+            let response = await fetch(`http://api.aladhan.com/v1/timingsByCity?country=${JSON.parse(localStorage.getItem("country") || '').name[0]}&city=${JSON.parse(localStorage.getItem("country") || '').name[1]}`);
             let data1: any = await response.json()
             setGet(data1)
+
+
         }
         return () => {
+
             get();
         }
-    })
+    }, [])
 
     const salat = [{
         name: "الفجر",
@@ -48,7 +52,7 @@ function Praytimes(props: any) {
     return (
         <div className="times">
             <div className="main text-[40px] font-bold w-full flex justify-end px-[30px] py-[20px]">
-                <h1 className="w-[200px] text-right border-b-[black] border-b-[5px]">{country !== "" ? JSON.parse(country).name2[0] : null}</h1>
+                <h1 className="w-[200px] text-right border-b-[black] border-b-[5px]">{country.length !== 0 ? country.name2[0] : null}</h1>
             </div>
             <div className="elements grid grid-cols-3 w-full gap-[10px] mt-[30px] justify-items-center max-md:grid-cols-2 max-sm:grid-cols-1">
                 {salat.map((e) => (
