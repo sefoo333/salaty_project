@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import Radio from '../_componants/radio';
+import Radio2 from '../_componants/radio2';
 
 function page() {
     return (
@@ -18,7 +19,7 @@ function page() {
                 </div>
 
                 <div className="radio w-full h-[700px] flex justify-center items-center">
-                    <Radio />
+                    <Radio2 />
                 </div>
 
             </div>
