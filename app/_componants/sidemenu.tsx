@@ -51,7 +51,8 @@ function Sidemenu() {
     // }, [JSON.parse(localStorage.getItem("darkmode") || "")])
     let [active, setActive] = useState(false)
 
-     if (localStorage.length == 0) {
+    if(typeof window !== "undefined"){
+   if (localStorage.length == 0) {
                 localStorage.setItem("darkmode", JSON.stringify(false))
                 localStorage.setItem("coutry", JSON.stringify({
                     name: ["EG", "cairo", "مصر"],
@@ -59,7 +60,7 @@ function Sidemenu() {
                 }))
             }
     
-
+    }
 
     return (
         <>
