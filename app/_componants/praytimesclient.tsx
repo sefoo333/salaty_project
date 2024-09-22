@@ -53,7 +53,8 @@ function Praytimes(props: any) {
     ]
     return (
         <>
-                <div className="times">
+            {typeof window !== "undefined" ? (
+             <div className="times">
                     <div className="main text-[40px] font-bold w-full flex justify-end px-[30px] py-[20px]">
                         <h1 className="w-[200px] text-right border-b-[black] border-b-[5px]">{localStorage.getItem("country") !== null ?  JSON.parse(localStorage.getItem("country") || '').name2[0] : null}</h1>
                     </div>
@@ -66,6 +67,7 @@ function Praytimes(props: any) {
                         ))}
                     </div>
                 </div>
+            ) : (<h1>Error of data</h1>)}
         </>
     )
 }
