@@ -32,7 +32,10 @@ export default function Home() {
 
 
   return (
-    <div className="parent px-[30px] w-full">
+    <>
+    {typeof window !== "undefined" ? (
+      <>
+            <div className="parent px-[30px] w-full">
       <Praytimes />
       <div className="doaa_time w-full h-[400px] mt-[50px] mb-[100px]">
         <div className="main text-[40px] font-bold w-full flex justify-end px-[30px] py-[20px]">
@@ -65,5 +68,8 @@ export default function Home() {
         </div>
       </div>
     </div>
+      </>
+    ): null}
+    </>
   );
 }
