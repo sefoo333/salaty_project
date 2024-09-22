@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 // import "../images/pexels-samrana3003-1883409.jpg"
 
