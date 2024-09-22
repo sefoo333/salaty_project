@@ -48,11 +48,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.className} antialiased`}
       >
         <div className="window flex justify-end mb-[40px]" >
-      {typeof window !== "undefined" ? (
-         <>
             {children}
-         </>
-      ) : (<h1>Error</h1>)}
           <Sidemenu  />
           
         </div>
