@@ -49,7 +49,9 @@ export default function RootLayout({
       >
         <div className="window flex justify-end mb-[40px]" >
       {typeof window !== "undefined" ? (
-          {children}
+         <>
+            {children}
+         </>
       ) : (<h1>Error</h1>)}
           <Sidemenu  />
           
