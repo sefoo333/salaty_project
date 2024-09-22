@@ -44,7 +44,8 @@ export default function RootLayout({
 
   return (
     <html lang="ar">
-      <body
+      {typeof window !== "undefined" ? (
+       <body
         className={`${geistSans.variable} ${geistMono.className} antialiased`}
       >
         <div className="window flex justify-end mb-[40px]" >
@@ -55,6 +56,7 @@ export default function RootLayout({
 {/*         <Footer />
          */}
       </body>
+      ) : (<h1>Error</h1>)}
     </html>
   );
 }
