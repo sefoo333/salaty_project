@@ -48,7 +48,11 @@ const get = async () => {
         time:data1.data?.timings?.Isha ,
     }
     ]
-let datt:any = localStorage.getItem("country")
+
+let datt:any = []
+if (localstorage !== undefined || localstorage !== null){
+ datt = localStorage.getItem("country")
+}
     return (
         <>
             
