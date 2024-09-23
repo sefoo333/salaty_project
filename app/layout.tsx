@@ -6,7 +6,7 @@ import "./globals.css";
 import Sidemenu from "./_componants/sidemenu";
 import { Cairo, Barlow_Condensed } from "next/font/google";
 import Footer from "./_componants/footer";
-import Home from "./page.tsx"
+import Home from "./page"
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
