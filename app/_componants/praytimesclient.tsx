@@ -13,7 +13,7 @@ const get = async () => {
       
                                 let response = await fetch(`http://api.aladhan.com/v1/timingsByCity?country=EG"&city=cairo`);
                     let data2: any = await response.json()
-                    setGet([...data1 , ...data2])
+                    setGet(data2)
            }
                 
 
