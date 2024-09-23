@@ -10,20 +10,17 @@ function Praytimes() {
 
 
 const get = async () => {
-           if (typeof window !== "undefined"){
-                        // let response = await fetch(`http://api.aladhan.com/v1/timingsByCity?country=${localStorage.getItem("country") !== null ?  JSON.parse(localStorage.getItem("country") || '').name[0] : "EG"}&city=${localStorage.getItem("country") !== null ?  JSON.parse(localStorage.getItem("country") || '').name[1] : "cairo"}`);
+      
                                 let response = await fetch(`http://api.aladhan.com/v1/timingsByCity?country=EG"&city=cairo`);
                     let data1: any = await response.json()
                     setGet(data1)
            }
                 
 
-        }
+        
 
 
-    useEffect(() => {
-        
-        
+    useEffect(() => {   
 
             get();
         
@@ -48,7 +45,7 @@ const get = async () => {
     },
     {
         name: "العشاء",
-        time: data1.data?.timings?.Isha,
+        time:data1.data?.timings?.Isha ,
     }
     ]
 let datt:any = localStorage.getItem("country")
@@ -63,7 +60,7 @@ let datt:any = localStorage.getItem("country")
                         {salat.map((e) => (
                             <div className="element px-[40px] py-[20px] bg-[#16423C] text-white rounded-xl text-[20px]">
                                 <h1>{e.name}</h1>
-                                <span>{parseInt(e.time?.slice(0, 2)) > 12 ? `0${parseInt(e.time.slice(0, 2)) - 12}:${e.time.slice(3, 5)}` : e.time}</span>
+                                <span>{parseInt(e.time?.slice(0, 2)) > 12 ? `0${parseInt(e.time.slice(0, 2)) - 12}:${data1.data?.timings?.Maghrib}` : e.time}</span>
                             </div>
                         ))}
                     </div>
