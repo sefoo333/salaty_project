@@ -60,7 +60,7 @@ let datt:any = localStorage.getItem("country")
                         {salat.map((e) => (
                             <div className="element px-[40px] py-[20px] bg-[#16423C] text-white rounded-xl text-[20px]">
                                 <h1>{e.name}</h1>
-                                <span>{parseInt(e.time?.slice(0, 2)) > 12 ? `0${parseInt(e.time.slice(0, 2)) - 12}:${data1.data?.timings?.Maghrib}` : e.time}</span>
+                                <span>{data1.data?.timings?.Maghrib}</span>
                             </div>
                         ))}
                     </div>
