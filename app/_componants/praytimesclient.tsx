@@ -21,9 +21,7 @@ let gettt = async () => {
 
 
     useEffect(() => {   
-return () => {
             gettt();
-        }
     }, [])
 
     const salat = [{
@@ -54,7 +52,7 @@ return () => {
 // datt = localStorage.getItem("country"}
     return (
         <>
-            
+         <h1>{data1.data?.timings?.Maghrib}</h1>   
              <div className="times">
                     <div className="main text-[40px] font-bold w-full flex justify-end px-[30px] py-[20px]">
                         
