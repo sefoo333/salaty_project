@@ -21,9 +21,9 @@ let gettt = async () => {
 
 
     useEffect(() => {   
-
+return () => {
             gettt();
-        
+        }
     }, [])
 
     const salat = [{
