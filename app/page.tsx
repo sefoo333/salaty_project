@@ -33,7 +33,6 @@ export default function Home() {
 
   return (
     <>
-  {typeof window !== "undefined" ? (
 
       <>
             <div className="parent px-[30px] w-full">
@@ -70,7 +69,7 @@ export default function Home() {
       </div>
     </div>
       </>
-   ):null}
+   
     </>
   );
 }
