@@ -6,6 +6,7 @@ import "./globals.css";
 import Sidemenu from "./_componants/sidemenu";
 import { Cairo, Barlow_Condensed } from "next/font/google";
 import Footer from "./_componants/footer";
+import Home from "./page.tsx"
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -48,7 +49,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.className} antialiased`}
       >
         <div className="window flex justify-end mb-[40px]" >
-            {children}
+            <Home />
           <Sidemenu  />
           
         </div>
