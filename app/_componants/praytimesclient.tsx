@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 
 function Praytimes() {
 
-    let [data1, setGet]: any = useState([])
+    let [data1, setGet]: any = useState(null)
 
     let [country, setData2]: any = useState([]);
 
@@ -52,7 +52,6 @@ let gethiis = async () => {
 // datt = localStorage.getItem("country"}
     return (
         <>
-         <h1>{data1.data?.timings?.Maghrib}</h1>   
              <div className="times">
                     <div className="main text-[40px] font-bold w-full flex justify-end px-[30px] py-[20px]">
                         
@@ -61,7 +60,7 @@ let gethiis = async () => {
                         {salat.map((e) => (
                             <div className="element px-[40px] py-[20px] bg-[#16423C] text-white rounded-xl text-[20px]">
                                 <h1>{e.name}</h1>
-                                <span>{data1.data?.timings?.Maghrib}</span>
+                                <span>{data1 !== null ? data1.data?.timings?.Maghrib : null}</span>
                             </div>
                         ))}
                     </div>
