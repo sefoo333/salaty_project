@@ -26,24 +26,24 @@ let gethiis = async () => {
 
     const salat = [{
         name: "الفجر",
-        time: data1.data?.timings?.Fajr,
+        // time: data1.data?.timings?.Fajr,
     }, {
         name: "الشروق",
-        time: data1.data?.timings?.Sunrise ,
+        // time: data1.data?.timings?.Sunrise ,
     }, {
         name: "الظهر",
-        time: data1.data?.timings?.Dhuhr,
+        // time: data1.data?.timings?.Dhuhr,
     }, {
         name: "العصر",
-        time: data1.data?.timings?.Asr,
+        // time: data1.data?.timings?.Asr,
     },
     {
         name: "المغرب",
-        time: data1.data?.timings?.Maghrib,
+        // time: data1.data?.timings?.Maghrib,
     },
     {
         name: "العشاء",
-        time:data1.data?.timings?.Isha ,
+        // time:data1.data?.timings?.Isha ,
     }
     ]
 
