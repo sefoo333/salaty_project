@@ -23,10 +23,10 @@ const get = async () => {
 
     useEffect(() => {
         
-        return () => {
+        
 
             get();
-        }
+        
     }, [])
 
     const salat = [{
