@@ -50,7 +50,7 @@ const get = async () => {
     ]
 
 let datt:any = []
-if (localstorage !== undefined || localstorage !== null){
+if (localStorage !== undefined || localStorage !== null){
  datt = localStorage.getItem("country")
 }
     return (
