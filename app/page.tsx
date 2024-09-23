@@ -33,7 +33,8 @@ export default function Home() {
 
   return (
     <>
-    {typeof window !== "undefined" ? (
+  
+
       <>
             <div className="parent px-[30px] w-full">
       <Praytimes />
@@ -69,7 +70,7 @@ export default function Home() {
       </div>
     </div>
       </>
-    ): null}
+   
     </>
   );
 }
