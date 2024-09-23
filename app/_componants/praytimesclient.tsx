@@ -17,12 +17,12 @@ let gettt = async () => {
            }
                 
 
-        
 
 
     useEffect(() => {   
             gettt();
     }, [])
+        console.log("thius",data1)
 
     const salat = [{
         name: "الفجر",
