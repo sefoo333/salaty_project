@@ -14,8 +14,8 @@ function page() {
 
     return (
         <div className="parent px-[30px] w-full">
-{/*             <Praytimes />
- */}
+     <Praytimes />
+ 
 
             <div className="pray_timenow mt-[50px]">
                 <div className="main mb-[10px] text-[40px] font-bold w-full flex justify-center px-[30px] py-[20px] text-nowrap text-center">
