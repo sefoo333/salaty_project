@@ -32,9 +32,7 @@ export default function Home() {
 
 
   return (
-    <>
-
-      <>
+   
             <div className="parent px-[30px] w-full">
       <Praytimes />
       <div className="doaa_time w-full h-[400px] mt-[50px] mb-[100px]">
@@ -68,8 +66,5 @@ export default function Home() {
         </div>
       </div>
     </div>
-      </>
-   
-    </>
   );
 }
