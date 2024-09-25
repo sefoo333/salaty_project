@@ -30,11 +30,29 @@ const sections = [{
 
 export default function Home() {
 
+let [data1, setGet]: any = useState(null)
+
+    let [country, setData2]: any = useState([]);
+
+
+let gethiis = async () => {
+      
+                                let response = await fetch("http://api.aladhan.com/v1/timingsByCity?country=EG&city=cairo");
+                    let data2: any = await response.json()
+                    setGet(data2)
+           }
+                
+
+
+
+    useEffect(() => {   
+            gethiis();
+    }, [])
 
   return (
    
             <div className="parent px-[30px] w-full">
-      <Praytimes />
+      <Praytimes data={data1} />
       <div className="doaa_time w-full h-[400px] mt-[50px] mb-[100px]">
         <div className="main text-[40px] font-bold w-full flex justify-end px-[30px] py-[20px]">
           <h1 className="w-[200px] text-right border-b-[black] border-b-[5px]">دعاء اليوم</h1>
