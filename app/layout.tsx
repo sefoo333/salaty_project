@@ -50,7 +50,7 @@ export default function RootLayout({
       >
         <div className="window flex justify-end mb-[40px]" >
             <Home />
-      //    <Sidemenu  />
+      {* <Sidemenu  />*}
           
         </div>
 {/*         <Footer />
