@@ -31,7 +31,7 @@ const sections = [{
 
 export default function Home() {
 
-let [data1, setGet]: any = useState(null)
+let [data1, setGet]: any = useState([])
 
     let [country, setData2]: any = useState([]);
 
