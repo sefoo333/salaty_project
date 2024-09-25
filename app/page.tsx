@@ -63,7 +63,7 @@ let gethiis = async () => {
             <img src="/azkar.jpg" className="w-full z-[-1] h-full object-cover absolute  " alt=""></img>
           </div>
           <h1 className="z-[9] text-[22px] text-center">
-            {jsonfile["أدعية الأنبياء"][Math.round(Math.random() * 2)]?.content}
+           
           </h1>
         </div>
       </div>
