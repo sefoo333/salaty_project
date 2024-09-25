@@ -51,7 +51,7 @@ let gethiis = async () => {
 //if (localStorage !== undefined ||/localStorage !== null){
 // datt = localStorage.getItem("country"}
     return (
-        <>
+       
              <div className="times">
                     <div className="main text-[40px] font-bold w-full flex justify-end px-[30px] py-[20px]">
                         
@@ -65,7 +65,7 @@ let gethiis = async () => {
                         ))}
                     </div>
                 </div>
-        </>
+        
     )
 }
 
