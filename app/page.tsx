@@ -36,11 +36,7 @@ let [data1, setGet]: any = useState([])
     let [country, setData2]: any = useState([]);
 
 
-let gethiis = async () => {
-      
-                                let response = await fetch("http://api.aladhan.com/v1/timingsByCity?country=EG&city=cairo");
-                    let data2: any = await response.json()
-                    setGet(data2)
+let gethiis = async () => { fetch("http://api.aladhan.com/v1/timingsByCity?country=EG&city=cairo").then((res) => {res.json()}).then((data) => {setGet(data)})
            }
                 
 
