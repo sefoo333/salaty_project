@@ -22,8 +22,8 @@ function page() {
                     <h1 className="w-[200px] text-center border-b-[black] border-b-[5px]">الصلاة القادمة</h1>
                 </div>
                 
-{/*                 <PrayNext />
-                 */}
+          <PrayNext />
+                 
             </div>
         </div>
     )
