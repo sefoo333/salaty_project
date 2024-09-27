@@ -13,7 +13,7 @@ function ChildComponent(props: button) {
 
 
     return (
-        <div className="element mt-[30px] relative text-nowrap  max-2xl:w-[700px]  max-md:w-[400px] max-lg:w[500px] w-full h-[300px]  overflow-hidden  rounded-xl flex items-center justify-center bg-black text-white text-[20px]  ">
+        <div className="element mt-[30px] relative text-nowrap  max-2xl:w-[650px]  max-md:w-[350px] max-lg:w[450px] w-full h-[300px]  overflow-hidden  rounded-xl flex items-center justify-center bg-black text-white text-[20px]  ">
             <div className="image absolute h-full w-full before:bg-[#0000007a] before:w-full before:z-10 before:absolute before:h-full">
                 <img src={`/${props.image}`} className="w-full  h-full object-cover absolute  " alt=""></img>
             </div>
