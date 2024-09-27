@@ -16,12 +16,20 @@ function Radio() {
     let [Time, setTime]: any = useState("")
     let audio2: any = useRef()
 
-    let [audio, setaudio] = useState({});
+    let [audio, setaudio] = useState({
+        name2:"error",
+        name:"error"
+    });
     
     const audioon = () => {
         
     if (localStorage.getItem("audio") !== null){
         setaudio(JSON.parse(localStorage.getItem("audio") || ''));
+    } else {
+        setaudio({
+            name2:"إذاعة عبدالباسط عبدالصمد",
+            name:"https://backup.qurango.net/radio/abdulbasit_abdulsamad_mojawwad"
+        })
     }
         
     }
@@ -57,14 +65,14 @@ function Radio() {
                             {active2 ? (
                                 <FaPlay className='mr-[20px] cursor-pointer' onClick={() => {
                                     if (audio2.current !== "") {
-                                        audio2.current.play()
+                                        audio2?.current.play()
                                     }
                                 }} />
 
                             ) : (
                                 <IoPause className='cursor-pointer' onClick={() => {
                                     if (audio2.current !== "") {
-                                        audio2.current.pause()
+                                        audio2?.current.pause()
                                     }
                                 }} />
                             )}
@@ -78,9 +86,9 @@ function Radio() {
                             active ? setActive(false) : setActive(true)
                         }}>
                             {active ? (<AiFillSound onClick={() => {
-                                audio2.current.volume = 0
+                                audio2?.current.volume = 0
                             }} />) : (<FaVolumeMute onClick={() => {
-                                audio2.current.volume = 1
+                                audio2?.current.volume = 1
                             }} />)}
                         </div>
                     </div>
