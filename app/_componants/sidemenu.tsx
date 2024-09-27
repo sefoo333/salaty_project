@@ -84,7 +84,7 @@ function Sidemenu() {
                   <FiMenu className="hidden z-[999999999] max-lg:block text-[30px] fixed left-[20px] top-[20px]" onClick={() => active ? setActive(false) : setActive(true)} />
             <div className={`flex h-screen flex-col justify-between relative z-[99999999] border-e max-lg:h-full max-lg:w-full max-lg:items-center max-lg:justify-center max-lg:text-center max-lg:fixed bg-white ${!active ? `max-lg:hidden` : `max-lg:flex`}`} style={dark2 ? { backgroundColor: "#1E201E", color: "white" } : {}} >
                 <div className="px-4 py-6">
-                    <span className={`grid text-[35px] font-bold italic  h-10 w-32 place-content-center rounded-lg  {dark2 ? "text-black" : "text-white"} ${getCar.className}`}>
+                    <span className={`grid text-[35px] font-bold italic  h-10 w-32 place-content-center rounded-lg  {dark2 ? "text-white" : "text-black"} ${getCar.className}`}>
                         صـلاتــي
                     </span>
 
