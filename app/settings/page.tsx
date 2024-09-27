@@ -92,7 +92,7 @@ function page() {
                                                 e.target.checked ? localStorage.setItem("darkmode", JSON.stringify(true)) : localStorage.setItem("darkmode", JSON.stringify(false))
                                                 refersh.refresh()
                                             }}
-                                            checked={dark2}
+                                            checked={dark2 ? true : false}
                                         />
 
                                         <span
