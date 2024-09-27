@@ -68,6 +68,8 @@ function page() {
             })
             .catch(error => console.error('Error fetching location:', error));
     }, [])
+
+    useEffect(() => {                                                refersh.refresh()} , [dark])
     return (
         <>
                 <div className="parent w-full">
