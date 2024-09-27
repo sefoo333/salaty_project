@@ -21,7 +21,7 @@ function Radio() {
     const audioon = () => {
         
     if (localStorage.getItem("audio") !== null){
-        setDark2(JSON.parse(localStorage.getItem("audio") || ''));
+        setaudio(JSON.parse(localStorage.getItem("audio") || ''));
     }
         
     }
