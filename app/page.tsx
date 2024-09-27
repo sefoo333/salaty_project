@@ -1,4 +1,3 @@
-"use client"
 
 import React, { useEffect, useState } from 'react'
 import Image from "next/image";
@@ -49,7 +48,7 @@ let gethiis =  () => { fetch("http://api.aladhan.com/v1/timingsByCity?country=EG
   return (
    
             <div className="parent px-[30px] w-full">
-      <Praytimes data={data1} />
+      <Praytimes  />
       <div className="doaa_time w-full h-[400px] mt-[50px] mb-[100px]">
         <div className="main text-[40px] font-bold w-full flex justify-end px-[30px] py-[20px]">
           <h1 className="w-[200px] text-right border-b-[black] border-b-[5px]">دعاء اليوم</h1>
