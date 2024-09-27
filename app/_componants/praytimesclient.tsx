@@ -26,24 +26,24 @@ let gethiis = async () => {
 
     const salat = [{
         name: "الفجر",
-        // time: data1.data?.timings?.Fajr,
+        time: data1?.data?.timings?.Fajr,
     }, {
         name: "الشروق",
-        // time: data1.data?.timings?.Sunrise ,
+         time: data1?.data?.timings?.Sunrise ,
     }, {
         name: "الظهر",
-        // time: data1.data?.timings?.Dhuhr,
+         time: data1?.data?.timings?.Dhuhr,
     }, {
         name: "العصر",
-        // time: data1.data?.timings?.Asr,
+         time: data1?.data?.timings?.Asr,
     },
     {
         name: "المغرب",
-        // time: data1.data?.timings?.Maghrib,
+         time: data1?.data?.timings?.Maghrib,
     },
     {
         name: "العشاء",
-        // time:data1.data?.timings?.Isha ,
+         time:data1?.data?.timings?.Isha ,
     }
     ]
 
@@ -61,7 +61,7 @@ let gethiis = async () => {
                         {salat.map((e) => (
                             <div className="element px-[40px] py-[20px] bg-[#16423C] text-white rounded-xl text-[20px]">
                                 <h1>{e.name}</h1>
-                                <span>{data1 !== null ? data1?.data?.timings?.Maghrib : null}</span>
+                                <span>{parseInt(e.time?.slice(0, 2)) > 12 ? `0${parseInt(e.time.slice(0, 2)) - 12}:${e.time.slice(3, 5)}` : e.time}</span>
                             </div>
                         ))}
                     </div>
