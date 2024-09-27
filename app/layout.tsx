@@ -48,8 +48,8 @@ export default function RootLayout({
       <Sidemenu  />
           
         </div>
-{/*         <Footer />
-         */}
+        <Footer />
+        
       </body>
     </html>
   );
