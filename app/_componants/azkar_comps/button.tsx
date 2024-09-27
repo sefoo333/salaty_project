@@ -29,7 +29,7 @@ function ChildComponent(props: button) {
                 }} >{value}<span className='relative z-[9999]'>/{props.count}</span>
                     <span id='test' className='bg-circle absolute w-[76px] h-[76px] z-[-1] rounded-full'>
                     </span></button>
-                <span className='text-[15px] max-md:text-[13px] max-md:text-wrap'>{props.description}</span>
+                <span className='text-[15px] max-md:text-[13px] max-md:text-wrap max-md:text-center'>{props.description}</span>
             </div>
         </div>
     )
