@@ -8,11 +8,10 @@ function PrayNext() {
 
     useEffect(() => {
         const get = async () => {
-            if (typeof window !== "undefined") {
-                let response = await fetch(`http://api.aladhan.com/v1/timingsByCity?country=${localStorage.getItem("country")?.split("/")[0]}&city=${localStorage.getItem("country")?.split("/")[1]}`);
+                let response = await fetch(`http://api.aladhan.com/v1/timingsByCity?country=EG&city=cairo`);
                 let data1: any = await response.json()
                 setGet(data1)
-            }
+        
         }
         return () => {
             get();
@@ -45,7 +44,6 @@ function PrayNext() {
     ]
     return (
         <>
-            {typeof window !== "undefined" ? (
                 <div className="element relative text-nowrap px-[40px] py-[20px] w-full h-[300px]  overflow-hidden  rounded-xl flex items-center justify-center bg-black text-white text-[20px]  ">
                     <div className="image absolute h-full w-full before:bg-[#0000007a] before:w-full before:z-10 before:absolute before:h-full">
                         <img src="/azkar.jpg" className="w-full  h-full object-cover absolute  " alt=""></img>
@@ -98,7 +96,6 @@ function PrayNext() {
                         }</span>
                     </div>
                 </div>
-            ) : null}
         </>
     )
 }
