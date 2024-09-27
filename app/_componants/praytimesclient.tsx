@@ -24,6 +24,17 @@ let gethiis = async () => {
     }, [])
         console.log("thius",data1)
 
+
+      if(typeof window !== "undefined"){
+                localStorage.setItem("darkmode", JSON.stringify(false))
+                localStorage.setItem("coutry", JSON.stringify({
+                    name: ["EG", "cairo", "مصر"],
+                    name2: ["مصر"]
+                }))
+            
+    
+    }
+
     const salat = [{
         name: "الفجر",
         time: data1?.data?.timings?.Fajr,
