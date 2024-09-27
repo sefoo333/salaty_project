@@ -5,7 +5,7 @@ import "./globals.css";
 import Sidemenu from "./_componants/sidemenu";
 import { Cairo, Barlow_Condensed } from "next/font/google";
 import Footer from "./_componants/footer";
-import Home from "./page"
+import Request from "./_componants/request";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -42,6 +42,7 @@ export default function RootLayout({
        <body
         className={`${geistSans.variable} ${geistMono.className} antialiased`}
       >
+         <Request />
         <div className="window flex justify-end mb-[40px]" >
          {children}
       {/* <Sidemenu  />*/}
