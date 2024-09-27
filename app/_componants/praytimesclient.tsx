@@ -12,15 +12,8 @@ function Praytimes(props:any) {
     
 
 let gethiis = async () => {
-      let localy:any = localStorage.getItem("country");
-        if (localStorage.length > 0){
-        console.log(JSON.parse(localy));
-            console.log(localStorage)
-    } else {
-            console.log("error")
-    }
     
-                                let response = await fetch("http://api.aladhan.com/v1/timingsByCity?country=EG&city=cairo");
+                    let response = await fetch(`http://api.aladhan.com/v1/timingsByCity?country=${localStorage.getItem("country") !== null ? JSON.parse(localStorage.getItem("country") || '').name[0] : "EG"}&city=${localStorage.getItem("country") !== null ? JSON.parse(localStorage.getItem("country") || '').name[1] : "cairo"}`);
                     let data2: any = await response.json()
                     setGet(data2)
            }
