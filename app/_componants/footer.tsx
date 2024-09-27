@@ -13,15 +13,23 @@ const getCar = Rakkas({
 });
 
 function Footer() {
-    let [active, setActive]: any = useState(false);
+   let [dark2, setDark2] = useState(false);
+    
+    const darkmodeon = () => {
+        
+    if (localStorage.getItem("darkmode") !== null){
+        setDark2(JSON.parse(localStorage.getItem("darkmode") || ''));
+    }
+        
+    }
+
     useEffect(() => {
-        setActive(localStorage.getItem("darkmode"))
-    }, [])
+        darkmodeon()
+    },[])
     return (
         <>
-            {typeof window !== "undefined" ? (
                 <>
-                    {!JSON.parse(localStorage.getItem("darkmode") || "") ? (
+                    {!dark2 ? (
                         <footer className="bg-gray-50">
                             <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
                                 <div className="sm:flex sm:items-center sm:justify-between">
@@ -64,7 +72,6 @@ function Footer() {
                         )
                     }
                 </>
-            ) : null}
         </>
     )
 }
