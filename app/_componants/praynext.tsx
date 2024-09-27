@@ -13,9 +13,8 @@ function PrayNext() {
                 setGet(data1)
         
         }
-        return () => {
             get();
-        }
+        
     })
 
     let time: any = new Date().getHours();
