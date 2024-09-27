@@ -43,10 +43,10 @@ function Footer() {
                                             </p>
                                             <div className="links flex text-[20px] mt-[10px] items-center justify-center">
                                                 <a href="https://www.linkedin.com/in/sefoo333/" target='_blank' className='transition p-[10px] hover:bg-slate-800 hover:text-white rounded-full'>
-                                                    <FaGithub  className='text-black' />
+                                                    <FaGithub  className='text-black transition  hover:text-white' />
                                                 </a>
                                                 <a href="https://github.com/sefoo333" target="_blank" className='ml-[10px]  p-[10px] transition hover:bg-cyan-500 hover:text-white rounded-full'>
-                                                    <IoLogoLinkedin  className='text-black'/>
+                                                    <IoLogoLinkedin  className='text-black transition  hover:text-white'/>
                                                 </a>
 
                                             </div>
