@@ -65,14 +65,14 @@ function Radio() {
                             {active2 ? (
                                 <FaPlay className='mr-[20px] cursor-pointer' onClick={() => {
                                     if (audio2.current !== "") {
-                                        audio2?.current.play()
+                                        audio2.current.play()
                                     }
                                 }} />
 
                             ) : (
                                 <IoPause className='cursor-pointer' onClick={() => {
                                     if (audio2.current !== "") {
-                                        audio2?.current.pause()
+                                        audio2.current.pause()
                                     }
                                 }} />
                             )}
@@ -86,9 +86,9 @@ function Radio() {
                             active ? setActive(false) : setActive(true)
                         }}>
                             {active ? (<AiFillSound onClick={() => {
-                                audio2?.current.volume = 0
+                                audio2.current.volume = 0
                             }} />) : (<FaVolumeMute onClick={() => {
-                                audio2?.current.volume = 1
+                                audio2.current.volume = 1
                             }} />)}
                         </div>
                     </div>
