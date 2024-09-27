@@ -30,9 +30,8 @@ function page() {
             let data2 = await response.json();
             setData(data2)
         }
-        return () => {
             test()
-        }
+        
     }, [])
     useEffect(() => {
         const test2 = async () => {
@@ -40,12 +39,21 @@ function page() {
             let data2 = await response2.json();
             setData3(data2)
         }
-        return () => {
             test2()
-        }
+        
     }, [])
 
     let [dark, setDark] = useState(false);
+let [dark2 ,setDark2] = useState(false)
+    let darkmodeon = () => {
+    if (localStorage.getItem("darkmode") !== null){
+        setDark2(JSON.parse(localStorage.getItem("darkmode") || '')))
+    }
+    }
+
+    useEffect(() => {
+        darkmodeon()
+    },[])
     let [error, setError] = useState("")
 
     let [dd, setdd]: any = useState("")
@@ -59,7 +67,6 @@ function page() {
     }, [])
     return (
         <>
-            {typeof window !== "undefined" ? (
                 <div className="parent w-full">
                     <div className="main text-[40px] font-bold w-full flex justify-end px-[30px] py-[20px]">
                         <h1 className="w-[200px] text-right border-b-[black] border-b-[5px]">الأعدادات</h1>
@@ -82,7 +89,7 @@ function page() {
                                                 e.target.checked ? localStorage.setItem("darkmode", JSON.stringify(true)) : localStorage.setItem("darkmode", JSON.stringify(false))
                                                 refersh.refresh()
                                             }}
-                                            checked={JSON.parse(localStorage.getItem("darkmode") || "")}
+                                            checked={dark2}
                                         />
 
                                         <span
@@ -131,7 +138,7 @@ function page() {
                                                 name="HeadlineAct"
                                                 id="HeadlineAct"
                                                 className="mt-1.5 w-full rounded-lg border-gray-300 text-gray-700 sm:text-sm p-[15px]"
-                                                style={JSON.parse(localStorage.getItem("darkmode") || '') ? { backgroundColor: "#1E201E", color: "white" } : {}}
+                                                style={dark2 ? { backgroundColor: "#1E201E", color: "white" } : {}}
                                                 onChange={(e: any) => {
                                                     select({
                                                         name: (e.target.value).split("/"),
@@ -187,7 +194,7 @@ function page() {
                                         <select
                                             name="HeadlineAct"
                                             id="HeadlineAct"
-                                            style={JSON.parse(localStorage.getItem("darkmode") || '') ? { backgroundColor: "#1E201E", color: "white" } : {}}
+                                            style={dark2 ? { backgroundColor: "#1E201E", color: "white" } : {}}
                                             className="mt-1.5 w-full rounded-lg border-gray-300 text-gray-700 sm:text-sm p-[15px]"
                                             onChange={(e: any) => {
 
@@ -211,7 +218,6 @@ function page() {
                     </div>
 
                 </div>
-            ) : null}
         </>
     )
 }
