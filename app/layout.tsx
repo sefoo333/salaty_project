@@ -45,7 +45,7 @@ export default function RootLayout({
          <Request />
         <div className="window flex justify-end mb-[40px]" >
          {children}
-      {/* <Sidemenu  />*/}
+      <Sidemenu  />
           
         </div>
 {/*         <Footer />
