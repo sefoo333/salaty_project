@@ -28,7 +28,6 @@ let gethiis = async () => {
     useEffect(() => {   
             gethiis();
     }, [])
-        console.log("thius",data1)
 
 
     const salat = [{
@@ -60,7 +59,6 @@ let gethiis = async () => {
     return (
        
              <div className="times">
-<h1>{data1 !== null ? data1?.data?.timings?.Maghrib : null}</h1>
                     <div className="main text-[40px] font-bold w-full flex justify-end px-[30px] py-[20px]">
                         <h1 className="w-[200px] text-right border-b-[black] border-b-[5px]">{name}</h1>
                     </div>
