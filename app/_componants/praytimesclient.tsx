@@ -53,7 +53,7 @@ let gethiis = async () => {
     return (
        
              <div className="times">
-<h1>{props.data.data?.timings?.Maghrib}</h1>
+<h1>{data1 !== null ? data1?.data?.timings?.Maghrib : null}</h1>
                     <div className="main text-[40px] font-bold w-full flex justify-end px-[30px] py-[20px]">
                         
                     </div>
@@ -61,7 +61,7 @@ let gethiis = async () => {
                         {salat.map((e) => (
                             <div className="element px-[40px] py-[20px] bg-[#16423C] text-white rounded-xl text-[20px]">
                                 <h1>{e.name}</h1>
-                                <span>{data1 !== null ? props.data.data?.timings?.Maghrib : null}</span>
+                                <span>{data1 !== null ? data1?.data?.timings?.Maghrib : null}</span>
                             </div>
                         ))}
                     </div>
