@@ -9,15 +9,7 @@ function Praytimes(props:any) {
     let [country, setData2]: any = useState([]);
 
 
-      if(typeof window !== "undefined"){
-                localStorage.setItem("darkmode", JSON.stringify(false))
-                localStorage.setItem("coutry", JSON.stringify({
-                    name: ["EG", "cairo", "مصر"],
-                    name2: ["مصر"]
-                }))
-            
     
-    }
 
 let gethiis = async () => {
       let localy:any = localStorage.getItem("country");
@@ -36,6 +28,15 @@ let gethiis = async () => {
 
 
     useEffect(() => {   
+          if(typeof window !== "undefined"){
+                localStorage.setItem("darkmode", JSON.stringify(false))
+                localStorage.setItem("coutry", JSON.stringify({
+                    name: ["EG", "cairo", "مصر"],
+                    name2: ["مصر"]
+                }))
+            
+    
+    }
             gethiis();
     }, [])
         console.log("thius",data1)
