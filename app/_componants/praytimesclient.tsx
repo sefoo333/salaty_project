@@ -9,8 +9,19 @@ function Praytimes(props:any) {
     let [country, setData2]: any = useState([]);
 
 
+      if(typeof window !== "undefined"){
+                localStorage.setItem("darkmode", JSON.stringify(false))
+                localStorage.setItem("coutry", JSON.stringify({
+                    name: ["EG", "cairo", "مصر"],
+                    name2: ["مصر"]
+                }))
+            
+    
+    }
+
 let gethiis = async () => {
       
+    console.log(JSON.parse(localStorage.getItem("country"))
                                 let response = await fetch("http://api.aladhan.com/v1/timingsByCity?country=EG&city=cairo");
                     let data2: any = await response.json()
                     setGet(data2)
@@ -24,16 +35,6 @@ let gethiis = async () => {
     }, [])
         console.log("thius",data1)
 
-
-      if(typeof window !== "undefined"){
-                localStorage.setItem("darkmode", JSON.stringify(false))
-                localStorage.setItem("coutry", JSON.stringify({
-                    name: ["EG", "cairo", "مصر"],
-                    name2: ["مصر"]
-                }))
-            
-    
-    }
 
     const salat = [{
         name: "الفجر",
