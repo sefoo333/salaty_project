@@ -51,7 +51,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.className} antialiased`}
       >
         <div className="window flex justify-end mb-[40px]" >
-            <Home />
+         {children}
       {/* <Sidemenu  />*/}
           
         </div>
