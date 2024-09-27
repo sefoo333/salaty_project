@@ -20,8 +20,12 @@ function Praytimes(props:any) {
     }
 
 let gethiis = async () => {
-      
-        console.log(JSON.parse(localStorage.getItem("country") || ""));
+      let localy:any = localStorage.getItem("country");
+        if (localStorage.length > 0){
+        console.log(JSON.parse(localy));
+    } else {
+            console.log("error")
+    }
     
                                 let response = await fetch("http://api.aladhan.com/v1/timingsByCity?country=EG&city=cairo");
                     let data2: any = await response.json()
