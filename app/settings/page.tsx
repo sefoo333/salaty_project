@@ -69,7 +69,6 @@ function page() {
             .catch(error => console.error('Error fetching location:', error));
     }, [])
 
-    useEffect(() => {                                                refersh.refresh()} , [dark])
     return (
         <>
                 <div className="parent w-full">
@@ -92,7 +91,7 @@ function page() {
                                             className="peer sr-only [&:checked_+_span_svg[data-checked-icon]]:block [&:checked_+_span_svg[data-unchecked-icon]]:hidden"
                                             onChange={(e) => {
                                                 e.target.checked ? localStorage.setItem("darkmode", JSON.stringify(true)) : localStorage.setItem("darkmode", JSON.stringify(false))
-                                                refersh.refresh()
+                                                location.reload()
                                             }}
                                             checked={dark2 ? true : false}
                                         />
