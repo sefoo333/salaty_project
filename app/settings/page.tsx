@@ -47,9 +47,11 @@ function page() {
     let [dark2, setDark2] = useState(false);
     
     const darkmodeon = () => {
+        
     if (localStorage.getItem("darkmode") !== null){
-        setDark2(JSON.parse(localStorage.getItem("darkmode") || '')));
+        setDark2(JSON.parse(localStorage.getItem("darkmode") || ''));
     }
+        
     }
 
     useEffect(() => {
