@@ -55,7 +55,7 @@ export default function Home() {
             <Link href={e.link} className="link">
               <div className="element relative text-nowrap px-[40px] py-[20px] w-[200px] h-[150px]  overflow-hidden  rounded-xl flex items-center justify-center bg-black text-white text-[20px] cursor-pointer transition-[500ms] hover:scale-110">
                 <div className="image absolute h-full w-full before:bg-[#0000007a] before:w-full before:z-10 before:absolute before:h-full">
-                  <img src={e.href} className="w-full  h-full object-cover absolute  " alt=""></img>
+                  <img   loading="lazy" src={e.href} className="w-full  h-full object-cover absolute  " alt=""></img>
                 </div>
                 <h1 className="z-10">{e.name}</h1>
               </div>
