@@ -1,7 +1,6 @@
 # salaty app 🕋
 
-**Salaty app** is a simple and elegant web application that displays daily prayer times based on the user's current location also The app is lightweight, responsive, and ideal for users who want quick access to prayer times without installing additional apps.  
-Built for convenience and everyday use in the browser.
+**Salaty app** is a simple and elegant web application that displays daily prayer times based on the user's current location also The app is lightweight, responsive, and ideal for users who want quick access to prayer times without installing additional apps Built for convenience and everyday use in the browser.
 
 ## Features 🚀
 - Current local time
