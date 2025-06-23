@@ -33,7 +33,7 @@
    The application should now be running on `http://localhost:3000`.
 
 
-Developed by [Seifeldeen Ali Mohamed](linkedin.com/in/sefoo333)
+Developed by [Seifeldeen Ali Mohamed](https://www.linkedin.com/in/sefoo333/)
 
 
 
